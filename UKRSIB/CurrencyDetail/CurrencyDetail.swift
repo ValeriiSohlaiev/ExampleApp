@@ -23,5 +23,10 @@ class CurrencyDetail: UIViewController {
         rate.text = String(format:"%.5f", viewModel.rate ?? 0.0)
         date_rate.text = viewModel.date
     }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        self.dismiss(animated: true)
+    }
 
 }
